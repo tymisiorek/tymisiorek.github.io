@@ -1,87 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-  <link rel="stylesheet" crossorigin href="/assets/index-KoxrX9zg.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  
+  <!-- Google Font (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" crossorigin href="/assets/index-DsOoQ_6_.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Ty Misiorek</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+          <h1>Ty Misiorek</h1>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/resume.pdf" target="_blank">Resume</a> <!-- Resume link -->
+            <a href="assets/transcript.pdf" target="_blank">Transcript</a> <!-- Transcript link -->
+          </nav>
         </div>
-    </header>
+      </header>
+      
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I'm Ty. I'm currently a third-year at the University of Virginia and am doing research in the School of Data Science at the Connected Data Hub.</p>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Ty. I'm currently a third-year at the University of Virginia and
+        am doing research in the School of Data Science at the Connected Data
+        Hub.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <img
+            src="/assets/networkvis-ZpO1dkZ5.png"
+            alt="Spotify Collaboration Network"
+            class="project-icon"
+          />
+          <h3>Spotify Collaboration Network</h3>
+          <p>
+            A 3D visualization of artist collaborations
+            <a
+              href="https://spotify-collaboration-network-7f7d5ee3e659.herokuapp.com/"
+              target="_blank"
+              >View Project</a
+            >
+          </p>
         </div>
-    </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project">
-                    <img src="/assets/networkvis-ZpO1dkZ5.png" alt="Spotify Collaboration Network" class="project-icon">
-                    <h3>Spotify Collaboration Network</h3>
-                    <p>A visualization of artist collaborations. <a href="https://spotify-collaboration-network-7f7d5ee3e659.herokuapp.com/" target="_blank">View Project</a></p>
-                </div>
-                
-                <div class="project">
-                    <img src="/assets/interlocks-DaHcEVPc.png" alt="Connected Data Hub" class="project-icon">
-                    <h3>Connected Data Hub</h3>
-                    <p>An analysis of interlocking boards. <a href="https://github.com/tymisiorek/board_analysis" target="_blank">View on GitHub</a></p>
-                </div>
-
-                <div class="project">
-                    <img src="/assets/reserachhub-CNeMWaQy.png" alt="ResearchHub" class="project-icon">
-                    <h3>ResearchHub</h3>
-                    <p>A research project management application. <a href="https://cs3240-f24-b-07-29a08618e5ca.herokuapp.com/" target="_blank">View Project</a></p>
-                </div>
-            </div>
+        <div class="project">
+          <img
+            src="/assets/interlocks-DaHcEVPc.png"
+            alt="Connected Data Hub"
+            class="project-icon"
+          />
+          <h3>Connected Data Hub</h3>
+          <p>
+            An analysis of interlocking boards
+            <a
+              href="https://github.com/tymisiorek/board_analysis"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </p>
         </div>
-    </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out!</p>
-            <ul class="contact-list">
-                <li>
-                    <a href="mailto:tymisiorek@gmail.com" target="_blank">
-                        <img src="/assets/email-CoTVKf5L.png" alt="Email Icon" class="contact-icon"> Email
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/tymisiorek" target="_blank">
-                        <img src="/assets/github-DkTr3Tul.png" alt="GitHub Icon" class="contact-icon"> GitHub
-                    </a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/tymisiorek" target="_blank">
-                        <img src="/assets/linkedin-Cr4FHQBt.png" alt="LinkedIn Icon" class="contact-icon"> LinkedIn
-                    </a>
-                </li>
-            </ul>
+        <div class="project">
+          <img
+            src="/assets/reserachhub-CNeMWaQy.png"
+            alt="ResearchHub"
+            class="project-icon"
+          />
+          <h3>ResearchHub</h3>
+          <p>
+            A research project management application
+            <a
+              href="https://cs3240-f24-b-07-29a08618e5ca.herokuapp.com/"
+              target="_blank"
+              >View Project</a
+            >
+          </p>
         </div>
-    </section>
-    
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Ty Misiorek. All rights reserved.</p>
-    </footer>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Feel free to reach out!</p>
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:tymisiorek@gmail.com" target="_blank"
+            ><img
+              src="/assets/email-CoTVKf5L.png"
+              alt="Email Icon"
+              class="contact-icon"
+            />
+            Email</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/tymisiorek" target="_blank"
+            ><img
+              src="/assets/github-DkTr3Tul.png"
+              alt="GitHub Icon"
+              class="contact-icon"
+            />
+            GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/tymisiorek" target="_blank"
+            ><img
+              src="/assets/linkedin-Cr4FHQBt.png"
+              alt="LinkedIn Icon"
+              class="contact-icon"
+            />
+            LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top">↑</button>
+  <footer>
+    <p>&copy; 2025 Ty Misiorek. All rights reserved.</p>
+  </footer>
 
-    <script src="app.js"></script>
+  <!-- Back to Top Button -->
+  <button id="back-to-top">↑</button>
+
+  <script src="app.js"></script>
 </body>
 </html>
