@@ -1,30 +1,40 @@
-import * as THREE from 'three';
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
 
-const canvas = document.getElementById('three-canvas');
-const scene = new THREE.Scene();
+// Show/hide the back-to-top button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
 
-const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
-);
-camera.position.z = 5;
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-const renderer = new THREE.WebGLRenderer({ canvas });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+// Smooth Scroll for Navigation Links
+const navLinks = document.querySelectorAll('header nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        const targetId = event.target.getAttribute('href').substring(1); // Get target section ID
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
 
-// Add a simple cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
-}
-animate();
+// Highlight Project on Hover
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    project.addEventListener('mouseover', () => {
+        project.style.borderColor = '#007bff'; // Highlight border on hover
+    });
+    project.addEventListener('mouseout', () => {
+        project.style.borderColor = '#ddd'; // Reset border on hover out
+    });
+});
