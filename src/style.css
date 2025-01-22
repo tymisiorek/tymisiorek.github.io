@@ -1,10 +1,3 @@
-/* 
-  Key changes:
-  1) Reduced section padding to cut down whitespace.
-  2) Reverted project styles so images fill the entire box, with text overlay.
-  3) Reduced header padding slightly to remove extra whitespace.
-*/
-
 /* RESET + GLOBALS */
 * {
     box-sizing: border-box;
@@ -231,3 +224,39 @@
     background: #007bff;
   }
   
+  /* About Section */
+#about {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#about .profile-container {
+  margin: 20px auto;
+  width: 250px; /* Fixed size for the circle */
+  height: 250px;
+  border-radius: 50%; /* Makes the image a circle */
+  overflow: hidden; /* Ensures the image stays within the circle */
+  border: 5px solid #031a32; /* Adds a border around the circle */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional touch */
+}
+
+#about .profile-image {
+  width: 100%; /* Image fills the container */
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales properly */
+  display: block;
+}
+
+#about h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #555;
+}
