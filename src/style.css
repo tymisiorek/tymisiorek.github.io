@@ -284,3 +284,31 @@ footer {
   margin-bottom: 15px;
   line-height: 1.8;
 }
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-item:hover {
+  color: #58a6ff;
+  transform: translateY(-5px);
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
