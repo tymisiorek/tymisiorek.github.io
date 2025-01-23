@@ -242,8 +242,9 @@ footer {
 
 #about .profile-container {
   margin: 0px auto;
-  width: 300px;
-  height: 300px;
+  margin-bottom: 30px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #555; /* Visible on dark background */
