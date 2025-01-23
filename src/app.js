@@ -33,9 +33,58 @@ navLinks.forEach(link => {
 const projects = document.querySelectorAll('.project');
 projects.forEach(project => {
   project.addEventListener('mouseover', () => {
-    project.style.borderColor = '#007bff'; // Highlight border on hover
+    const randomColor = `hsl(${Math.random() * 360}, 60%, 70%)`; // Generate random color
+    project.style.backgroundColor = randomColor;
+    project.style.transform = 'scale(1.05)'; // Slight zoom effect
   });
   project.addEventListener('mouseout', () => {
-    project.style.borderColor = '#ddd'; // Reset border on hover out
+    project.style.backgroundColor = ''; // Reset background
+    project.style.transform = 'scale(1)'; // Reset zoom
   });
+});
+
+// Typing Effect in About Section
+const typingText = "Welcome to my portfolio!";
+const typingElement = document.createElement('p');
+typingElement.className = 'typing-effect';
+document.querySelector('#about .container').appendChild(typingElement);
+
+let typingIndex = 0;
+function typeEffect() {
+  if (typingIndex < typingText.length) {
+    typingElement.textContent += typingText.charAt(typingIndex);
+    typingIndex++;
+    setTimeout(typeEffect, 100); // Adjust typing speed
+  }
+}
+typeEffect();
+
+// Fade-in Sections on Scroll
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+// Profile Image Hover Effect
+const profileContainer = document.querySelector('#about .profile-container');
+
+profileContainer.addEventListener('mouseover', () => {
+  const randomColor = `hsl(${Math.random() * 360}, 60%, 70%)`; 
+  profileContainer.style.borderColor = randomColor;
+});
+
+profileContainer.addEventListener('mouseout', () => {
+  profileContainer.style.borderColor = '#555'; // Reset to default border color
 });

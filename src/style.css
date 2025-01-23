@@ -171,7 +171,7 @@ section p {
 .contact-list {
   list-style: none;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -236,14 +236,14 @@ footer {
 /* About Section */
 #about {
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0 10px; /* Reduce padding-bottom for less space */
   background-color: #000000;
 }
 
 #about .profile-container {
-  margin: 20px auto;
-  width: 280px;
-  height: 280px;
+  margin: 0px auto;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #555; /* Visible on dark background */
@@ -259,30 +259,41 @@ footer {
 
 #about p {
   max-width: 600px;
-  margin: 20px auto 0 auto;
+  margin: 10px auto 0 auto; /* Adjust margin for less vertical space */
   line-height: 1.6;
   font-size: 1.1rem;
   color: #ccc; /* Slightly dimmed text */
 }
 
+/* About Me Section */
 #about-me {
-  background-color: #000000; /* Ensures consistent background */
+  background-color: #000000;
+  padding: 0px 0 30px; /* Reduce padding-top for less space with #about */
 }
 
 #about-me h2 {
-  /* Inherits styles from section h2 */
+  font-size: 2rem;
+  margin-bottom: 10px; /* Adjust spacing for visual balance */
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
 }
 
 #about-me .about-me-content {
   max-width: 800px;
   margin: 0 auto;
-  text-align: left; /* Optional: Align text to left for better readability */
+  text-align: left;
   color: #f0f0f0;
 }
 
 #about-me .about-me-content p {
   margin-bottom: 15px;
   line-height: 1.8;
+}
+
+/* Adjusted Section Spacing */
+section {
+  margin-bottom: 0; /* Eliminate extra spacing between sections */
 }
 
 .tech-list {
@@ -311,4 +322,49 @@ footer {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+/* Typing Effect */
+.typing-effect {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #58a6ff;
+  text-align: center;
+}
+
+/* Fade-in Animation */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+#about .profile-container:hover {
+  border-color: #58a6ff; 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#about .profile-container.random-color {
+  transition: border-color 0.3s ease;
 }
