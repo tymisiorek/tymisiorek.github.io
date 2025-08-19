@@ -2,183 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
-  <!-- <base href="/tymisiorek.github.io"> -->
-  <!-- Google Font (Optional) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ty Misiorek - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Link your updated style.css -->
   <link rel="stylesheet" href="style.css" />
-  <script type="module" src="app.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Ty Misiorek</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#about-me">About Me</a> <!-- New Navigation Link -->
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="assets/resume.pdf" target="_blank">Resume</a>
-        <a href="assets/transcript.pdf" target="_blank">Transcript</a>
-      </nav>
-    </div>
-  </header>
-  
-  <section id="about">
-    <!-- <h1>Hi! I'm Ty</h1> -->
-    <div class="container">
-      <div class="profile-container">
-        <img src="assets/github_headshot.jpg" alt="Profile Picture" class="profile-image">
-      </div>
-      <p>Hey, I'm Ty! I'm a third-year student at the University of Virginia studying Computer Science. Here, you can check
-        out some of the stuff I've been working on.
-      </p>
-    </div>
-  </section>
+  <div class="main-container">
+    <section id="intro">
+      <div class="intro-content">
+        <div class="intro-text">
+          <h1>Ty Misiorek</h1>
+          <p>
+            Hey, I'm Ty! I'm a fourth-year student at the University of Virginia, where I'm pursuing a B.S. in Computer Science. 
+            
+            I grew up in Southern Maryland, right on the Chesapeake Bay. Here, I spent lots of times outdoors, going to the beach with friends, or metal detecting in the woods (yup). Nowadays, you can find me spending my free time playing basketball and gaming.
 
-  <!-- New About Me Section -->
-  <section id="about-me">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-me-content">
-        <p>
-          Thanks for checking out my portfolio! Currently I'm doing research at the UVA School of Data Science where I'm 
-          examining the impact of academic leadership at universities. Outside of school, I enjoy playing basketball, listening to music,
-          and gaming. Through my research and projects, I've had the opportunity to explore various tools and technologies that help solve 
-          problems and bring my ideas to life.
-        </p>
-          <p>Here are some technologies I’ve been working with recently:</p>
-          <div class="tech-list">
-            <div class="tech-item">
-              <img src="assets/python.png" alt="Python Icon">
-              <span>Python</span>
-            </div>
-            <div class="tech-item">
-              <img src="assets/js.png" alt="JavaScript Icon">
-              <span>JavaScript</span>
-            </div>
-            <div class="tech-item">
-              <img src="assets/c.png" alt="C Icon">
-              <span>C</span>
-            </div>
-            <div class="tech-item">
-              <img src="assets/java.png" alt="Java Icon">
-              <span>Java</span>
-            </div>
-            </div>
+            During my time at UVA, I've spent a lot of time doing research under Professor Alex Gates at the Connected Data Hub. Much of my work here has focused on
+            analyzing the influence of boards of directors at universities. 
+
+          </p>
+          <div class="intro-links">
+            <a href="mailto:tymisiorek@gmail.com">Email</a> / 
+            <a href="https://linkedin.com/in/tymisiorek" target="_blank">LinkedIn</a> / 
+            <a href="assets/resume.pdf" target="_blank">Resume</a> /
+            <a href="assets/transcript.pdf" target="_blank">Transcript</a> 
           </div>
+        </div>
+        <div class="intro-image">
+          <img src="assets/github_headshot.jpg" alt="Profile Picture" />
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- End of About Me Section -->
-  
-  <section id="projects">
-    <div class="container">
+    </section>
+    
+    <hr>
+
+    <section id="works">
+      <h2>Research and Interests</h2>
+      <div class="works-content">
+        <div class="works-text">
+          <p>
+            I currently do undergraduate research with Professor Alex Gates at the Connected Data Hub, and have been with the team since my second year of college. 
+            I've spent my time here working on a project aimed to examine the influence of university boards of directors on various functions of schools. Fortunately,
+            this summer I had the opportunity to present my work at the INSNA Sunbelt 2025 in Paris! 
+          </p>
+
+          <p>
+            Additionally, I have grown interested in applications of AI through my research, internship, and personal projects. The combination of these has given me 
+            skills in both data collection and cleaning, building an AI system from the ground-up, and presenting my work as to be digestible for others. In the future,
+            I hope to work create AI that isn't just a black box for others, and easily justifies its value and process.
+
+            Below are some of the projects that I've had the opportunity to work on:
+          </p>
+        </div>
+        <div class="works-images">
+          <img src="assets/eiffel.jpg" alt="A tall, vertical photograph" class="photo-vertical">
+          <img src="assets/sunbelt.jpg" alt="A wide, horizontal photograph" class="photo-horizontal">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="projects">
       <h2>Projects</h2>
       <div class="project-list">
         <div class="project">
           <img
-            src="assets/networkvis.png"
-            alt="Spotify Collaboration Network"
-            class="project-icon"
+            src="assets/spotnet.png"
+            alt="Spotnet"
+            class="project-image"
           />
-          <h3>Spotify Collaboration Network</h3>
-          <p>
-            A 3D visualization of artist collaborations
+          <div class="project-info">
+            <h3>SpotNet</h3>
+            <p>A 3D visualization of artist collaborations and GCN + Personalized PageRank-based recommendation system</p>
             <a
-              href="https://spotify-collaboration-network-7f7d5ee3e659.herokuapp.com/"
+              href="https://github.com/tymisiorek/spotnet"
               target="_blank"
-            >View Project</a>
-          </p>
+              >View Project</a
+            >
+          </div>
         </div>
-
         <div class="project">
           <img
-            src="assets/interlocks.png"
+            src="assets/sunbelt.png"
             alt="Connected Data Hub"
-            class="project-icon"
+            class="project-image"
           />
-          <h3>Connected Data Hub</h3>
-          <p>
-            An analysis of university governance
+          <div class="project-info">
+            <h3>Connected Data Hub</h3>
+            <p>An analysis of university governance</p>
             <a
               href="https://github.com/tymisiorek/board_analysis"
               target="_blank"
-            >View on GitHub</a>
-          </p>
+              >View Project</a
+            >
+          </div>
+        </div>
+        
+        <div class="project">
+          <img
+            src="assets/tcf.png"
+            alt="theCourseForum"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3>theCourseForum</h3>
+            <p>UVA's largest course review and analytics platform</p>
+            <a
+              href="https://thecourseforum.com/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
 
         <div class="project">
           <img
             src="assets/reserachhub.png"
             alt="ResearchHub"
-            class="project-icon"
+            class="project-image"
           />
-          <h3>ResearchHub</h3>
-          <p>
-            A research project management application
+          <div class="project-info">
+            <h3>ResearchHub</h3>
+            <p>A research project management application</p>
             <a
               href="https://cs3240-f24-b-07-29a08618e5ca.herokuapp.com/"
               target="_blank"
-            >View Project</a>
-          </p>
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project">
+          <img
+            src="assets/inliers.png"
+            alt="3D Reconstruction"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3>3D Reconstruction Pipeline</h3>
+            <p>A two-view Structure from Motion Pipeline</p>
+            <a
+              href="https://github.com/tymisiorek/stereo_reconstruction"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="container">
+    <hr>
+
+    <section id="contact">
       <h2>Contact</h2>
       <p>Feel free to reach out!</p>
       <ul class="contact-list">
-        <li>
-          <a href="mailto:tymisiorek@gmail.com" target="_blank"
-            ><img
-              src="assets/email.jpg"
-              alt="Email Icon"
-              class="contact-icon"
-            />
-            Email</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/tymisiorek" target="_blank"
-            ><img
-              src="assets/github.png"
-              alt="GitHub Icon"
-              class="contact-icon"
-            />
-            GitHub</a
-          >
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/tymisiorek" target="_blank"
-            ><img
-              src="assets/linkedin.png"
-              alt="LinkedIn Icon"
-              class="contact-icon"
-            />
-            LinkedIn</a
-          >
-        </li>
+        <li><a href="mailto:tymisiorek@gmail.com">Email</a></li>
+        <li><a href="https://github.com/tymisiorek" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tymisiorek" target="_blank">LinkedIn</a></li>
       </ul>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Ty Misiorek</p>
-  </footer>
-
-  <!-- Back to Top Button -->
   <button id="back-to-top">↑</button>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-// Back to Top Button
 const backToTopButton = document.getElementById('back-to-top');
 
 // Show/hide the back-to-top button based on scroll position
@@ -14,50 +13,6 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-// Smooth Scroll for Internal Navigation Links
-const navLinks = document.querySelectorAll('header nav a[href^="#"]'); // Select only internal links
-
-navLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default anchor behavior
-    const targetId = link.getAttribute('href').substring(1); // Get target section ID
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-// Highlight Project on Hover
-const projects = document.querySelectorAll('.project');
-projects.forEach(project => {
-  project.addEventListener('mouseover', () => {
-    const randomColor = `hsl(${Math.random() * 360}, 60%, 70%)`; // Generate random color
-    project.style.backgroundColor = randomColor;
-    project.style.transform = 'scale(1.05)'; // Slight zoom effect
-  });
-  project.addEventListener('mouseout', () => {
-    project.style.backgroundColor = ''; // Reset background
-    project.style.transform = 'scale(1)'; // Reset zoom
-  });
-});
-
-// Typing Effect in About Section
-const typingText = "Welcome to my portfolio!";
-const typingElement = document.createElement('p');
-typingElement.className = 'typing-effect';
-document.querySelector('#about .container').appendChild(typingElement);
-
-let typingIndex = 0;
-function typeEffect() {
-  if (typingIndex < typingText.length) {
-    typingElement.textContent += typingText.charAt(typingIndex);
-    typingIndex++;
-    setTimeout(typeEffect, 100); // Adjust typing speed
-  }
-}
-typeEffect();
 
 // Fade-in Sections on Scroll
 const sections = document.querySelectorAll('section');
@@ -77,14 +32,15 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// Profile Image Hover Effect
-const profileContainer = document.querySelector('#about .profile-container');
+// Profile Image Hover
+const profileImage = document.querySelector('#intro .intro-image img');
 
-profileContainer.addEventListener('mouseover', () => {
-  const randomColor = `hsl(${Math.random() * 360}, 60%, 70%)`; 
-  profileContainer.style.borderColor = randomColor;
+profileImage.addEventListener('mouseover', () => {
+  profileImage.style.transform = 'scale(1.05)';
+  profileImage.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
 });
 
-profileContainer.addEventListener('mouseout', () => {
-  profileContainer.style.borderColor = '#555'; // Reset to default border color
+profileImage.addEventListener('mouseout', () => {
+  profileImage.style.transform = 'scale(1)';
+  profileImage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
 });
