@@ -217,7 +217,8 @@ section.fade-in {
 #works .works-images {
   flex: 1;
   position: relative; /* Crucial for positioning the images inside */
-  min-height: 400px;  /* Ensures the container has height for the collage */
+  min-height: 500px;  /* Ensures the container has height for the collage */
+  margin-left: 20px;
 }
 
 /* Common styles for both photos */
