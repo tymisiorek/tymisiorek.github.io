@@ -1,19 +1,3 @@
-const backToTopButton = document.getElementById('back-to-top');
-
-// Show/hide the back-to-top button based on scroll position
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.style.display = 'block';
-  } else {
-    backToTopButton.style.display = 'none';
-  }
-});
-
-// Scroll to the top when the button is clicked
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
 // Fade-in Sections on Scroll
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(

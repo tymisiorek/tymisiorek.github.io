@@ -1,9 +1,9 @@
 /* General Body Styles */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -14,31 +14,23 @@ body {
   padding: 20px;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 40px 0;
-}
-
 /* Typography */
 h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #e0e0e0;
   padding-bottom: 10px;
 }
 
 h3 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0 0 5px 0;
 }
 
@@ -173,23 +165,6 @@ footer {
   color: #888;
 }
 
-/* --- Back to Top Button --- */
-#back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 /* --- Fade-in Animation --- */
 section {
   opacity: 0;
@@ -259,6 +234,5 @@ section.fade-in {
   font-size: 0.9rem;
   color: #6b7280;
   text-decoration: none;
-  border-bottom: 1px dotted currentColor;
 }
 .project-info a.press-link:hover { opacity: 0.85; }
